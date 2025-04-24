@@ -205,17 +205,46 @@
             <!-- end navigation -->
         </header>
         <!-- end header --> 
+        <!-- start page title -->
+        @if ($tentang && $tentang->thumbnail)
+        <div style="max-width: 1200px; margin: 0 auto; padding-left: 15px; padding-right: 15px;">
+        <section class="top-space-margin page-title-big-typography border-radius-6px lg-border-radius-0px p-0" data-parallax-background-ratio="0.5" style="background-image: url('{{ asset('storage/' . $tentang->thumbnail) }}')">
+                <div class="opacity-extra-medium bg-blue-whale"></div>
+                <div class="container">
+                    <div class="row align-items-center justify-content-center small-screen">
+                        <div class="col-lg-8 position-relative text-center page-title-extra-large" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <h1 class="m-auto text-white text-shadow-double-large fw-600 ls-minus-2px">Tentang Desain Komunikasi Visual</h1>
+                        </div>
+                        <div class="down-section text-center" data-anime='{ "translateY": [-50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <a href="#down-section" class="section-link">
+                                <div class="text-white">
+                                    <i class="feather icon-feather-chevron-down icon-very-medium"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        </div>
+        @endif
+        <!-- end page title -->
         <!-- start section --> 
-        <section class="pb-0" style="margin-top: 50px;">
+        <section id="down-section" class="pb-0" style="margin-top: 50px; background: linear-gradient(to right, #f8f9fa, #ffffff); padding: 60px 0;">
             <div class="container">
                 <div class="row align-items-center justify-content-center">
-                    <div class="col-lg-6 col-md-10 md-mb-50px animation-float" data-anime='{ "effect": "slide", "color": "#ffffff", "direction":"lr", "easing": "easeOutQuad", "delay":50}'> 
-                        <img class="w-100" src="images/example1.jpeg" alt="">
-                    </div>
-                    <div class="col-xl-5 offset-xl-1 col-lg-6" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <h2 class="fw-700 text-dark-gray ls-minus-1px">Tentang Desain Komunikasi Visual</h2>
+                    <div 
+                        data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
+                        style="background-color: white; border-radius: 12px; padding: 40px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);">
+
+                        <h2 class="fw-700 text-dark-gray ls-minus-1px" style="font-size: 32px; position: relative; padding-bottom: 10px; margin-bottom: 20px;">
+                            Desain Komunikasi Visual
+                            <span style="content: ''; display: block; width: 60px; height: 4px; background-color: #FFB300; margin-top: 10px; border-radius: 2px;"></span>
+                        </h2>
+
                         @if ($tentang && $tentang->deskripsi)
-                        <p class="w-95 lg-w-100 mb-30px">{!! $tentang->deskripsi !!}</p>
+                            <p class="w-95 lg-w-100 mb-30px" style="font-size: 17px; line-height: 1.7; color: #444;">
+                                {!! $tentang->deskripsi !!}
+                            </p>
                         @endif
                     </div>
                 </div>

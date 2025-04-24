@@ -205,13 +205,31 @@
             <!-- end navigation -->
         </header>
         <!-- end header --> 
+        <!-- start page title -->
+        <div style="max-width: 1200px; margin: 0 auto; padding-left: 15px; padding-right: 15px;">
+        <section class="top-space-margin page-title-big-typography border-radius-6px lg-border-radius-0px p-0" data-parallax-background-ratio="0.5" style="background-image: url('{{ asset('images/example2.png') }}')">
+                <div class="opacity-extra-medium bg-blue-whale"></div>
+                <div class="container">
+                    <div class="row align-items-center justify-content-center small-screen">
+                        <div class="col-lg-8 position-relative text-center page-title-extra-large" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <h1 class="m-auto text-white text-shadow-double-large fw-600 ls-minus-2px">Visi Misi dan Tujuan</h1>
+                        </div>
+                        <div class="down-section text-center" data-anime='{ "translateY": [-50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <a href="#visi-misi" class="section-link">
+                                <div class="text-white">
+                                    <i class="feather icon-feather-chevron-down icon-very-medium"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        </div>
         <!-- Start Section -->
         <section id="visi-misi" class="mb-0 pb-0" style="margin-top: 50px;">
             <div class="container text-center">
                 <div class="card shadow-lg border-0 rounded-3 overflow-hidden mb-0" data-aos="fade-up" data-aos-duration="1000">
                     <div class="card-body p-4">
-                        <h5 class="text-dark-gray fw-700" data-aos="fade-down" data-aos-duration="1000">Visi, Misi dan Tujuan</h5>
-                        
                         <ul class="nav nav-tabs mb-1" id="myTab" role="tablist" style="border-bottom: 2px solid #ddd;" data-aos="fade-left" data-aos-duration="1000">
                             <li class="nav-item me-0" role="presentation" style="margin-top: 30px;">
                                 <button class="nav-link active" id="visi-tab" data-bs-toggle="tab" data-bs-target="#visi" type="button" role="tab" aria-controls="visi" aria-selected="true">Visi</button>
@@ -227,7 +245,6 @@
                         <div class="tab-content" id="myTabContent">
                             <!-- Tab Visi -->
                             <div class="tab-pane fade show active" id="visi" role="tabpanel" aria-labelledby="visi-tab">
-                                <h6 class="fw-bold text-start mb-0" style="color: black; font-size: 21px;" data-aos="fade-right" data-aos-duration="1000">Visi</h6>
                                 <div class="table-responsive">
                                     <table class="table table-bordered mt-1" data-aos="fade-up" data-aos-duration="1000">
                                         <thead>
@@ -253,7 +270,6 @@
 
                             <!-- Tab Misi -->
                             <div class="tab-pane fade" id="misi" role="tabpanel" aria-labelledby="misi-tab">
-                                <h6 class="fw-bold text-start mb-0" style="color: black; font-size: 21px;" data-aos="fade-right" data-aos-duration="1000">Misi</h6>
                                 <div class="table-responsive">
                                     <table class="table table-bordered mt-1" data-aos="fade-up" data-aos-duration="1000">
                                         <thead>
@@ -279,7 +295,6 @@
 
                             <!-- Tab Tujuan -->
                             <div class="tab-pane fade" id="tujuan" role="tabpanel" aria-labelledby="tujuan-tab">
-                                <h6 class="fw-bold text-start mb-0" style="color: black; font-size: 21px;" data-aos="fade-right" data-aos-duration="1000">Tujuan</h6>
                                 <div class="table-responsive">
                                     <table class="table table-bordered mt-1" data-aos="fade-up" data-aos-duration="1000">
                                         <thead>

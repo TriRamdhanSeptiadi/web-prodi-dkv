@@ -205,70 +205,38 @@
             <!-- end navigation -->
         </header>
         <!-- end header --> 
-        <!-- start banner -->
-        <section class="p-0 border-radius-6px full-screen md-h-600px sm-h-450px ipad-top-space-margin position-relative overflow-hidden">
-            <div id="particles-style-01" class="position-absolute h-100 top-0 left-0 w-100" data-particle="true" data-particle-options='{"particles":{"number":{"value":10,"density":{"enable":true,"value_area":800}},"color":{"value":["#000000", "#BEFF01"]},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":1,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":4,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":false,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":6,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true}'></div>
-            <div class="looping-wrapper md-h-100"></div>
-            <div class="text-base-color absolute-middle-center banner-title fw-600 d-none d-md-inline-block" data-anime='{ "el": "lines", "translateX": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>creative</div>
-            <div class="container h-100 position-relative">
-                <div class="row align-items-center justify-content-center h-100">
-                    <div class="col-12 text-center">
-                        <div class="fs-120 lh-120 sm-fs-100 text-dark-gray fw-600 ls-minus-4px" data-anime='{ "el": "lines", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 500, "staggervalue": 300, "easing": "easeOutQuad" }'>Program Studi Desain Komunikasi Visual</div>
+        <!-- start page title -->
+        <div style="max-width: 1200px; margin: 0 auto; padding-left: 15px; padding-right: 15px;">
+            <section class="top-space-margin page-title-big-typography border-radius-6px lg-border-radius-0px p-0"
+                data-parallax-background-ratio="0.5"
+                style="background-image: url('{{ asset('images/example2.png') }}'); background-size: cover; background-position: center; min-height: 300px; border-radius: 12px;">
+                
+                <div class="opacity-extra-medium" style="background-color: rgba(0, 0, 0, 0.5);"></div>
+                <div class="container">
+                    <div class="row align-items-center justify-content-center small-screen">
+                        <div class="col-lg-8 position-relative text-center page-title-extra-large"
+                            data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            
+                            <h1 class="m-auto"
+                                style="
+                                    color: white;
+                                    font-family: 'Helvetica Neue', sans-serif;
+                                    font-weight: 700;
+                                    font-size: 48px;
+                                    letter-spacing: 2px;
+                                    text-transform: uppercase;
+                                    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+                                    line-height: 1.2;
+                                    transition: transform 0.3s ease, opacity 0.3s ease;
+                                ">
+                                Desain Komunikasi Visual
+                            </h1>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- end banner -->
-        <!-- start section -->
-        <section class="p-0">
-            <div class="container">
-                <div class="row justify-content-center align-items-center flex-column flex-sm-row" data-anime='{ "el": "childs", "translateX": [15, 0], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                    <!-- start features box item -->
-                    <div class="col-auto icon-with-text-style-08 md-mb-10px text-center text-md-start">
-                        <div class="feature-box feature-box-left-icon-middle d-inline-flex align-middle">
-                            <div class="feature-box-icon me-5px">
-                                <i class="bi bi-patch-check-fill fs-15 text-dark-gray"></i>
-                            </div>
-                            <div class="feature-box-content">
-                                <span class="fs-14 fw-600 text-dark-gray text-uppercase">Kreatif Berkreasi</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end features box item -->
-                    <div class="col-auto md-mb-15px d-none d-md-flex">
-                        <span class="progress-step-separator bg-dark-gray w-100px lg-w-70px separator-line-1px d-block mx-auto"></span>
-                    </div>
-                    <!-- start features box item -->
-                    <div class="col-auto icon-with-text-style-08 md-mb-10px text-center text-md-start">
-                        <div class="feature-box feature-box-left-icon-middle d-inline-flex align-middle">
-                            <div class="feature-box-icon me-5px">
-                                <i class="bi bi-geo-alt-fill fs-15 text-dark-gray"></i>
-                            </div>
-                            <div class="feature-box-content">
-                                <span class="fs-14 fw-600 text-dark-gray text-uppercase">Lokasi di Jl. Pasir Kaliki</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end features box item -->
-                    <div class="col-auto md-mb-15px d-none d-md-flex">
-                        <span class="progress-step-separator bg-dark-gray w-100px lg-w-70px separator-line-1px d-block mx-auto"></span>
-                    </div>
-                    <!-- start features box item -->
-                    <div class="col-auto icon-with-text-style-08 text-center text-md-start">
-                        <div class="feature-box feature-box-left-icon-middle d-inline-flex align-middle">
-                            <div class="feature-box-icon me-5px">
-                                <i class="bi bi-heart-fill fs-15 text-dark-gray"></i>
-                            </div>
-                            <div class="feature-box-content">
-                                <span class="fs-14 fw-600 text-dark-gray text-uppercase">Desain Komunikasi Visual Berprestasi</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end features box item -->
-                </div>
-            </div>
-        </section>
-        <!-- end section -->
+            </section>
+        </div>
+        <!-- end page title -->
         <!-- Start Section -->
         <section class="position-relative overflow-hidden section-dark">
             <div class="container">
