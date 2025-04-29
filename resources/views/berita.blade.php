@@ -205,16 +205,30 @@
             <!-- end navigation -->
         </header>
         <!-- end header --> 
+        <!-- start page title -->
+        <div style="max-width: 1200px; margin: 0 auto; padding-left: 15px; padding-right: 15px;">
+        <section class="top-space-margin page-title-big-typography border-radius-6px lg-border-radius-0px p-0" data-parallax-background-ratio="0.5" style="background-image: url('{{ asset('images/example2.png') }}')">
+                <div class="opacity-extra-medium bg-blue-whale"></div>
+                <div class="container">
+                    <div class="row align-items-center justify-content-center small-screen">
+                        <div class="col-lg-8 position-relative text-center page-title-extra-large" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <h1 class="m-auto text-white text-shadow-double-large fw-600 ls-minus-2px">Berita</h1>
+                        </div>
+                        <div class="down-section text-center" data-anime='{ "translateY": [-50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <a href="#down-section" class="section-link">
+                                <div class="text-white">
+                                    <i class="feather icon-feather-chevron-down icon-very-medium"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        </div>
+        <!-- end page title -->
         <!-- start section -->
-        <section id="berita-terbaru" class="bg-gradient-tranquil-white overflow-hidden position-relative overlap-height pb-5 md-pb-7 xs-pb-50px">
-            <div class="container overlap-gap-section">
-                <div class="row justify-content-center align-items-center text-center text-md-start">
-                    <div class="text-center" style="margin-top: 50px;">
-                        <h5 class="text-dark-gray fw-700 mb-0" data-aos="fade-down" data-aos-duration="1000">
-                            Berita
-                        </h5>
-                    </div>                    
-                </div>                
+        <section id="down-section" class="bg-gradient-tranquil-white overflow-hidden position-relative overlap-height pb-5 md-pb-7 xs-pb-50px">
+            <div class="container overlap-gap-section">             
                 <div class="row">
                 <div class="col-12">
                     <ul class="blog-grid blog-wrapper grid-loading grid grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>

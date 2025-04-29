@@ -225,7 +225,7 @@
                 </div>
         </section>
         </div>
-        <!-- Start Section -->
+        <!-- end page title -->
         <!-- Start Section -->
         <section id="down-section" class="mb-0 pb-0" style="margin-top: 50px;">
             <div class="container text-center">

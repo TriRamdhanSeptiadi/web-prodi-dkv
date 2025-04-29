@@ -243,10 +243,11 @@
                 <div class="row align-items-center position-relative">
                     <!-- Kolom Gambar -->
                     @if ($tentang && $tentang->thumbnail)
-                    <div class="col-lg-6">
-                        <div class="image-container" data-bottom-top="transform: translateY(-80px)" data-top-bottom="transform: translateY(80px)">
-                            <img src="{{ asset('storage/' . $tentang->thumbnail) }}" alt="Biologi">
-                        </div>
+                    <div class="image-container"
+                        data-bottom-top="transform: scale(0.8) translateY(100px); opacity: 0;"
+                        data-center="transform: scale(1) translateY(0); opacity: 1;"
+                        data-top-bottom="transform: scale(0.8) translateY(-100px); opacity: 0;">
+                        <img src="{{ asset('storage/' . $tentang->thumbnail) }}" alt="Biologi">
                     </div>
                     @endif
                     <!-- Kolom Teks -->
@@ -356,7 +357,7 @@
                     <!-- Kolom Gambar -->
                     <div class="col-lg-6">
                         @if ($pimpinanStaff && $pimpinanStaff->foto)
-                        <div class="image-container" data-bottom-top="transform: translateY(-80px)" data-top-bottom="transform: translateY(80px)">
+                        <div class="image-container" data-bottom-top="transform: scale(1.1); opacity: 0.7;" data-top-bottom="transform: scale(1); opacity: 1;">
                             <img src="{{ asset('storage/' . $pimpinanStaff->foto) }}" alt="Informatika">
                         </div>
                         @endif

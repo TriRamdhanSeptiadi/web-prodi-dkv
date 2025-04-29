@@ -278,9 +278,11 @@
                                         @endif
                                         
                                         @if ($fasilitas->deskripsi)
-                                        <p class="mb-0" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">
+                                        <div class="fasilitas-deskripsi">
+                                            <p class="mb-0">
                                             {!! $fasilitas->deskripsi !!}
-                                        </p>
+                                            </p>
+                                        </div>
                                         @endif
                                     </div>
                                 </div>
