@@ -238,21 +238,12 @@
         </div>
         <!-- end page title -->
         <!-- Start Section -->
-        <section class="position-relative overflow-hidden section-dark">
-            <div class="container">
-                <div class="row align-items-center position-relative">
-                    <!-- Kolom Gambar -->
-                    @if ($tentang && $tentang->thumbnail)
-                    <div class="image-container"
-                        data-bottom-top="transform: scale(0.8) translateY(100px); opacity: 0;"
-                        data-center="transform: scale(1) translateY(0); opacity: 1;"
-                        data-top-bottom="transform: scale(0.8) translateY(-100px); opacity: 0;">
-                        <img src="{{ asset('storage/' . $tentang->thumbnail) }}" alt="Biologi">
-                    </div>
-                    @endif
+        <section class="position-relative overflow-hidden section-dark" style="margin-bottom: 0; padding-bottom: 0;">
+            <div class="container" style="padding: 0 15px;">
+                <div class="row align-items-center position-relative" style="margin-bottom: 10px;">
                     <!-- Kolom Teks -->
                     @if ($tentang && $tentang->deskripsi)
-                    <div class="col-lg-6 content-container" style="height: 400px;" data-anime='{ "effect": "slide", "color": "#ffffff", "direction":"lr", "easing": "easeOutQuad", "delay":50 }'>
+                    <div class="col-lg-6 content-container" style="height: 400px; padding: 0;" data-anime='{ "effect": "slide", "color": "#ffffff", "direction":"lr", "easing": "easeOutQuad", "delay":50 }'>
                         <h1 class="section-title">Desain Komunikasi Visual.</h1>
                         <p class="section-text" style="text-align: justify;">
                             {!! Str::before($tentang->deskripsi, '</p>') . '</p>' !!}
@@ -262,96 +253,106 @@
                         </a>
                     </div>
                     @endif
+
+                    <!-- Kolom Gambar -->
+                    @if ($tentang && $tentang->thumbnail)
+                    <div class="col-lg-6 image-container" style="padding: 0;"
+                        data-bottom-top="transform: scale(0.8) translateY(100px); opacity: 0;"
+                        data-center="transform: scale(1) translateY(0); opacity: 1;"
+                        data-top-bottom="transform: scale(0.8) translateY(-100px); opacity: 0;">
+                        <img src="{{ asset('storage/' . $tentang->thumbnail) }}" alt="Biologi" class="img-fluid">
+                    </div>
+                    @endif
                 </div>
             </div>
         </section>
         <!-- End Section -->
-        <!-- start section -->  
-        <section class="p-0 overflow-hidden">
-            <div class="container">
-                <div class="bg-dark-gray border-radius-6px p-8 md-p-6 sm-p-10 position-relative overflow-hidden">
-                    <div class="row justify-content-center mb-5">
-                        <div class="col-lg-8 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                            <h2 class="text-white fw-700 ls-minus-1px z-index-1 position-relative">Visi, Misi dan Tujuan</h2>
+        <!-- Start Section -->
+        <section class="position-relative overflow-hidden" style="margin-top: 0; padding-top: 0; margin-bottom: 5px;">
+            <div class="container" style="padding: 0 15px;">
+                <div class="row justify-content-center align-items-center" style="margin-top: 0;">
+                    <div class="col-xl-5 col-lg-6 md-mb-14 sm-mb-18 xs-mb-23 position-relative" data-anime='{ "translateY": [0, 0], "opacity": [0,1], "duration": 800, "delay": 100, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <div class="w-75 sm-w-80" data-animation-delay="200" data-shadow-animation="true" data-bottom-top="transform: translateY(50px)" data-top-bottom="transform: translateY(-50px)">
+                            @if ($tentang && $tentang->thumbnail)
+                            <img src="{{ asset('storage/' . $tentang->thumbnail) }}" alt="" class="border-radius-6px w-100">
+                            @endif
+                        </div>
+                        <div class="w-55 overflow-hidden position-absolute right-15px xs-w-55 bottom-minus-50px" data-shadow-animation="true" data-animation-delay="100" data-bottom-top="transform: translateY(20px)" data-top-bottom="transform: translateY(-20px)">
+                            @if ($tentang && $tentang->thumbnail)
+                            <img src="{{ asset('storage/' . $tentang->thumbnail) }}" alt="" class="border-radius-6px box-shadow-quadruple-large w-100" />
+                            @endif
                         </div>
                     </div>
-                    <div class="row row-cols-1 row-cols-md-3 justify-content-center" data-anime='{ "el": "childs", "translateX": [-30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <!-- Start Process Step Item -->
-                        <div class="col text-center last-paragraph-no-margin hover-box process-step-style-01 sm-mb-40px">
-                            <div class="process-step-icon-box position-relative mb-25px">
-                                <span class="progress-step-separator bg-white w-60 separator-line-1px opacity-2"></span>
-                                <!-- Link di sekitar elemen bulat -->
-                                <a href="/visi-misi-tujuan#visi" class="process-step-icon-link">
-                                    <div class="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-80px w-80px fs-18 bg-white box-shadow-large text-dark-gray alt-font fw-500">
-                                        <span class="fw-600 number position-relative z-index-1">01</span>
-                                        <div class="box-overlay bg-base-color rounded-circle"></div>
-                                    </div>
-                                </a>
+                    <div class="col-xl-5 offset-xl-1 col-lg-6 text-center text-lg-start" data-anime='{ "translateY": [0, 0], "opacity": [0,1], "duration": 800, "delay": 150, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <div class="swiper position-relative magic-cursor" data-slider-options='{ "autoHeight": true, "loop": true, "allowTouchMove": true, "autoplay": { "delay": 4000, "disableOnInteraction": false }, "navigation": { "nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev" }, "effect": "slide" }'>
+                            <div class="swiper-wrapper mb-5px" style="margin-bottom: 5px;">
+                                <!-- start text slider item -->
+                                <div class="swiper-slide" style="margin-bottom: 5px;">
+                                    <h1 class="section-title">Visi, Misi dan Tujuan</h1>
+                                    <span class="ps-25px pe-25px text-uppercase text-black fs-14 lh-42px fw-700 border-radius-100px d-inline-block" style="background: #FFB300;">Visi</span>
+                                    @if ($visiMisiTujuan && $visiMisiTujuan->visi)
+                                    <p class="w-95 xl-w-100">{!! $visiMisiTujuan->visi !!}</p>
+                                    @endif
+                                    <a href="/visi-misi-tujuan#visi" class="btn btn-large btn-expand-ltr text-dark-gray btn-rounded fw-700 mb-5px" style="margin-top: 5px;">
+                                        <span class="bg-base-color"></span>Lihat Selengkapnya
+                                    </a>
+                                </div>
+                                <!-- end text slider item -->
+                                <!-- start text slider item -->
+                                <div class="swiper-slide" style="margin-bottom: 5px;">
+                                    <h1 class="section-title">Visi, Misi dan Tujuan</h1>
+                                    <span class="ps-25px pe-25px text-uppercase text-black fs-14 lh-42px fw-700 border-radius-100px d-inline-block" style="background: #FFB300;">Misi</span>
+                                    @if ($visiMisiTujuan && $visiMisiTujuan->misi)
+                                    <p class="w-95 xl-w-100">{!! $visiMisiTujuan->misi !!}</p>
+                                    @endif
+                                    <a href="/visi-misi-tujuan#misi" class="btn btn-large btn-expand-ltr text-dark-gray btn-rounded fw-700 mb-5px" style="margin-top: 5px;">
+                                        <span class="bg-base-color"></span>Lihat Selengkapnya
+                                    </a>
+                                </div>
+                                <!-- end text slider item -->
+                                <!-- start text slider item -->
+                                <div class="swiper-slide" style="margin-bottom: 5px;">
+                                    <h1 class="section-title">Visi, Misi dan Tujuan</h1>
+                                    <span class="ps-25px pe-25px text-uppercase text-black fs-14 lh-42px fw-700 border-radius-100px d-inline-block" style="background: #FFB300;">Tujuan</span>
+                                    @if ($visiMisiTujuan && $visiMisiTujuan->tujuan)
+                                    <p class="w-95 xl-w-100">{!! $visiMisiTujuan->tujuan !!}</p>
+                                    @endif
+                                    <a href="/visi-misi-tujuan#tujuan" class="btn btn-large btn-expand-ltr text-dark-gray btn-rounded fw-700 mb-5px" style="margin-top: 5px;">
+                                        <span class="bg-base-color"></span>Lihat Selengkapnya
+                                    </a>
+                                </div>
+                                <!-- end text slider item -->
+                            </div> 
+                            <div class="d-flex justify-content-center justify-content-lg-start" style="margin-top: 10px;">
+                                <!-- start slider navigation -->
+                                <div class="slider-one-slide-prev-1 swiper-button-prev slider-navigation-style-04 border border-color-extra-medium-gray bg-white"><i class="bi bi-arrow-left-short icon-very-medium text-dark-gray"></i></div>
+                                <div class="slider-one-slide-next-1 swiper-button-next slider-navigation-style-04 border border-color-extra-medium-gray bg-white"><i class="bi bi-arrow-right-short icon-very-medium text-dark-gray"></i></div>
+                                <!-- end slider navigation --> 
                             </div>
-                            <span class="d-inline-block fs-32 fw-500 text-white mb-5px">Visi</span>
-                            @if ($visiMisiTujuan && $visiMisiTujuan->visi)
-                            <p class="w-80 md-w-90 d-inline-block">{!! $visiMisiTujuan->visi !!}</p>
-                            @endif
                         </div>
-                        <!-- End Process Step Item -->
-                        <!-- start process step item -->
-                        <div class="col text-center last-paragraph-no-margin hover-box process-step-style-01 sm-mb-40px">
-                            <div class="process-step-icon-box position-relative mb-25px">
-                                <span class="progress-step-separator bg-white w-60 separator-line-1px opacity-2"></span>
-                                <!-- Link di sekitar elemen bulat -->
-                                <a href="/visi-misi-tujuan#misi" class="process-step-icon-link">
-                                    <div class="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-80px w-80px fs-18 bg-white box-shadow-large text-dark-gray alt-font fw-500">
-                                        <span class="fw-600 number position-relative z-index-1">02</span>
-                                        <div class="box-overlay bg-base-color rounded-circle"></div>
-                                    </div>
-                                </a>
-                            </div>
-                            <span class="d-inline-block fs-32 fw-500 text-white mb-5px">Misi</span>
-                            @if ($visiMisiTujuan && $visiMisiTujuan->misi)
-                            <p class="w-80 md-w-90 d-inline-block">{!! $visiMisiTujuan->misi !!}</p>
-                            @endif
-                        </div>
-                        <!-- end process step item -->
-                        <!-- start process step item -->
-                        <div class="col text-center last-paragraph-no-margin hover-box process-step-style-01">
-                            <div class="process-step-icon-box position-relative mb-25px">
-                                <span class="progress-step-separator bg-white w-60 separator-line-1px opacity-2 d-md-none"></span>
-                                <!-- Link di sekitar elemen bulat -->
-                                <a href="/visi-misi-tujuan#tujuan" class="process-step-icon-link">
-                                    <div class="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-80px w-80px fs-18 bg-white box-shadow-large text-dark-gray alt-font fw-500">
-                                        <span class="fw-600 number position-relative z-index-1">03</span>
-                                        <div class="box-overlay bg-base-color rounded-circle"></div>
-                                    </div>
-                                </a>
-                            </div>
-                            <span class="d-inline-block fs-32 fw-500 text-white mb-5px">Tujuan</span>
-                            @if ($visiMisiTujuan && $visiMisiTujuan->tujuan)
-                            <p class="w-80 md-w-90 d-inline-block">{!! $visiMisiTujuan->tujuan !!}</p>
-                            @endif
-                        </div>
-                        <!-- end process step item -->
-                    </div>
-                    <div class="position-absolute top-5px ls-minus-6px left-0px w-100 text-center" data-bottom-top="transform: translate3d(380px, 0px, 0px);" data-top-bottom="transform: translate3d(-380px, 0px, 0px);">
-                        <div class="fs-200 sm-fs-170 xs-fs-110 fw-700 opacity-1">Visi, Misi dan Tujuan</div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- end section -->
+        <!-- End Section -->
         <!-- start page title --> 
-        <section class="p-0">
+        <section class="p-0" style="padding-top: 0; margin-top: -90px;">
             <div class="container">
                 <div class="row align-items-center justify-content-center extra-very-small-screen">
-                    <div class="col-xl-8 col-lg-10 text-center position-relative page-title-extra-large" data-anime='{ "el": "childs", "translateY": [-15, 0], "opacity": [0,1], "duration": 300, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <h1 class="fw-700 text-dark-gray mb-20px ls-minus-2px">Kata Sambutan</h1>
-                        <h2 class="fw-400 ls-0px mb-0">Selamat datang di website resmi program studi Desain Komunikasi Visual IWU</h2>
+                    <div class="col-xl-8 col-lg-10 text-center position-relative page-title-extra-large"
+                        data-anime='{ "el": "childs", "translateY": [-15, 0], "opacity": [0,1], "duration": 300, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
+                        style="margin-top: 0;">
+                        <h3 class="fw-700 text-dark-gray mb-20px ls-minus-2px">Kata Sambutan</h3>
+                        <h2 class="fw-400 ls-0px mb-0">
+                            Selamat datang di website resmi program studi Desain Komunikasi Visual IWU
+                        </h2>
                     </div>
                 </div>
             </div>
         </section>
         <!-- end page title -->
         <!-- start section -->
-        <section class="p-0 md-pt-50px position-relative">
+        <section class="p-0 position-relative">
             <div class="container">
                 <div class="row align-items-center position-relative">
                     <!-- Kolom Gambar -->
@@ -387,7 +388,7 @@
             <div class="container">
                 <div class="row align-items-center mb-4">
                     <div class="col-md-6 text-center text-md-start sm-mb-20px">
-                        <h2 class="fw-600 text-dark-gray mb-0 ls-minus-3px">Berita Terbaru</h2>
+                        <h3 class="fw-600 text-dark-gray mb-0 ls-minus-3px">Berita Terbaru</h3>
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <a href="/berita" class="btn btn-large btn-expand-ltr text-dark-gray btn-rounded fw-700"><span class="bg-base-color"></span>Jelajahi Semua Berita</a>
@@ -443,9 +444,6 @@
         <!-- end section -->
         <!-- start footer -->
         <footer class="bg-gradient-aztec-green position-relative">
-            <div class="position-absolute left-minus-100px top-25px">
-                <img src="{{asset('images/demo-elearning-bg-05.png')}}" alt="" class="w-80">
-            </div>
             <div class="background-position-center-top h-100 w-100 position-absolute left-0px top-0" style="background-image: url('images/vertical-line-bg-small.svg')"></div>
             <div class="container overlap-section">
             </div>
