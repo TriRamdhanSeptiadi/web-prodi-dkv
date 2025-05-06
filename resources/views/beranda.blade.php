@@ -20,7 +20,8 @@
         <link rel="stylesheet" href="{{asset('css/icon.min.css')}}"/>
         <link rel="stylesheet" href="{{asset('css/style.css')}}"/>
         <link rel="stylesheet" href="{{asset('css/responsive.css')}}"/>
-        <link rel="stylesheet" href="{{asset('demos/hosting/hosting.css')}}" />
+        <link rel="stylesheet" href="{{asset('demos/hosting/hosting.css')}}"/>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
     <body data-mobile-nav-style="full-screen-menu" data-mobile-nav-bg-color="">
         <!-- start header --> 
@@ -283,7 +284,7 @@
                             @endif
                         </div>
                     </div>
-                    <div class="col-xl-5 offset-xl-1 col-lg-6 text-center text-lg-start" data-anime='{ "translateY": [0, 0], "opacity": [0,1], "duration": 800, "delay": 150, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                    <div class="col-xl-5 offset-xl-1 col-lg-6 text-center text-lg-start" data-anime='{ "translateY": [0, 0], "opacity": [0,1], "duration": 2000, "delay": 150, "staggervalue": 300, "easing": "easeOutQuad" }'>
                         <div class="swiper position-relative magic-cursor" data-slider-options='{ "autoHeight": true, "loop": true, "allowTouchMove": true, "autoplay": { "delay": 4000, "disableOnInteraction": false }, "navigation": { "nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev" }, "effect": "slide" }'>
                             <div class="swiper-wrapper mb-5px" style="margin-bottom: 5px;">
                                 <!-- start text slider item -->
@@ -293,7 +294,7 @@
                                     @if ($visiMisiTujuan && $visiMisiTujuan->visi)
                                     <p class="w-95 xl-w-100">{!! $visiMisiTujuan->visi !!}</p>
                                     @endif
-                                    <a href="/visi-misi-tujuan#visi" class="btn btn-large btn-expand-ltr text-dark-gray btn-rounded fw-700 mb-5px" style="margin-top: 5px;">
+                                    <a href="{{ url('/visi-misi-tujuan?tab=visi') }}" class="btn btn-large btn-expand-ltr text-dark-gray btn-rounded fw-700 mb-5px" style="margin-top: 5px;">
                                         <span class="bg-base-color"></span>Lihat Selengkapnya
                                     </a>
                                 </div>
@@ -302,10 +303,10 @@
                                 <div class="swiper-slide" style="margin-bottom: 5px;">
                                     <h1 class="section-title">Visi, Misi dan Tujuan</h1>
                                     <span class="ps-25px pe-25px text-uppercase text-black fs-14 lh-42px fw-700 border-radius-100px d-inline-block" style="background: #FFB300;">Misi</span>
-                                    @if ($visiMisiTujuan && $visiMisiTujuan->misi)
-                                    <p class="w-95 xl-w-100">{!! $visiMisiTujuan->misi !!}</p>
+                                    @if ($visiMisiTujuan && is_array($visiMisiTujuan->misi) && count($visiMisiTujuan->misi) > 0)
+                                    <p class="w-95 xl-w-100">{!! $visiMisiTujuan->misi[0]['text'] !!}</p>
                                     @endif
-                                    <a href="/visi-misi-tujuan#misi" class="btn btn-large btn-expand-ltr text-dark-gray btn-rounded fw-700 mb-5px" style="margin-top: 5px;">
+                                    <a href="{{ url('/visi-misi-tujuan?tab=misi') }}" class="btn btn-large btn-expand-ltr text-dark-gray btn-rounded fw-700 mb-5px" style="margin-top: 5px;">
                                         <span class="bg-base-color"></span>Lihat Selengkapnya
                                     </a>
                                 </div>
@@ -314,10 +315,10 @@
                                 <div class="swiper-slide" style="margin-bottom: 5px;">
                                     <h1 class="section-title">Visi, Misi dan Tujuan</h1>
                                     <span class="ps-25px pe-25px text-uppercase text-black fs-14 lh-42px fw-700 border-radius-100px d-inline-block" style="background: #FFB300;">Tujuan</span>
-                                    @if ($visiMisiTujuan && $visiMisiTujuan->tujuan)
-                                    <p class="w-95 xl-w-100">{!! $visiMisiTujuan->tujuan !!}</p>
+                                    @if ($visiMisiTujuan && is_array($visiMisiTujuan->tujuan) && count($visiMisiTujuan->tujuan) > 0)
+                                    <p class="w-95 xl-w-100">{!! $visiMisiTujuan->tujuan[0]['text'] !!}</p>
                                     @endif
-                                    <a href="/visi-misi-tujuan#tujuan" class="btn btn-large btn-expand-ltr text-dark-gray btn-rounded fw-700 mb-5px" style="margin-top: 5px;">
+                                    <a href="{{ url('/visi-misi-tujuan?tab=tujuan') }}" class="btn btn-large btn-expand-ltr text-dark-gray btn-rounded fw-700 mb-5px" style="margin-top: 5px;">
                                         <span class="bg-base-color"></span>Lihat Selengkapnya
                                     </a>
                                 </div>
@@ -358,8 +359,13 @@
                     <!-- Kolom Gambar -->
                     <div class="col-lg-6">
                         @if ($pimpinanStaff && $pimpinanStaff->foto)
-                        <div class="image-container" data-bottom-top="transform: scale(1.1); opacity: 0.7;" data-top-bottom="transform: scale(1); opacity: 1;">
-                            <img src="{{ asset('storage/' . $pimpinanStaff->foto) }}" alt="Informatika">
+                        <div class="image-container ms-20" data-bottom-top="transform: scale(1.1); opacity: 0.7;" data-top-bottom="transform: scale(1); opacity: 1;">
+                            <img 
+                                src="{{ asset('storage/' . $pimpinanStaff->foto) }}"
+                                alt="Foto Pimpinan"
+                                class="img-fluid rounded"
+                                style="max-width: 250px;"
+                            >
                         </div>
                         @endif
                     </div>

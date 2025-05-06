@@ -242,8 +242,15 @@
         </div>
         <!-- end page title -->
         <!-- start section -->
-        <section id="down-section" class="bg-gradient-tranquil-white overflow-hidden position-relative overlap-height pb-5 md-pb-7 xs-pb-50px">
-            <div class="container overlap-gap-section">        
+        <section id="berita-terbaru" class="bg-gradient-tranquil-white overflow-hidden position-relative overlap-height pb-5 md-pb-7 xs-pb-50px">
+            <div class="container overlap-gap-section">
+                <div class="row justify-content-center align-items-center text-center text-md-start">
+                    <div class="text-center" style="margin-top: 50px;">
+                        <h1 class="section-title text-dark-gray fw-700 mb-0" data-aos="fade-down" data-aos-duration="1000">
+                            Kegiatan
+                        </h1>
+                    </div>                    
+                </div>                
                 <div class="row">
                 <div class="col-12">
                     <ul class="blog-grid blog-wrapper grid-loading grid grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
