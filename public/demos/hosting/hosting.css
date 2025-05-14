@@ -47,6 +47,9 @@ header .navbar-brand img {
 .navbar .navbar-nav .nav-link {
     font-size: 17px;
 }
+.nav-tabs .nav-link {
+    color: #FFB300;
+}
 /* bg background color */
 .bg-midnight-dark-blue {
     background-color: #191d3c;

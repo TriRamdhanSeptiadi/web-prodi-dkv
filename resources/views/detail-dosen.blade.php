@@ -212,7 +212,7 @@
             <!-- Profil Dosen -->
             <div class="col-md-4 text-center p-3 border rounded shadow-sm">
                 @if ($pimpinanStaff && $pimpinanStaff->foto)
-                <img src="{{ asset('storage/' . $pimpinanStaff->foto) }}" class="img-fluid rounded-circle" width="150" alt="Foto Dosen">
+                <img src="{{ asset('storage/' . $pimpinanStaff->foto) }}" class="img-fluid" width="200" alt="Foto Dosen">
                 @endif
                 <h5 class="card-title fw-600 fs-17 lh-28 text-dark-gray text-dark-gray-hover d-inline-block w-95 sm-w-100 mt-5">{{ $pimpinanStaff->nama }}</h5>
                 <p>
@@ -223,7 +223,7 @@
                     @php
                         $scholarUrl = 'https://scholar.google.com/citations?user=' . $pimpinanStaff->id_google_scholar;
                     @endphp
-                    <a href="{{ $scholarUrl }}" target="_blank" class="btn w-100" style="background-color: #0D47A1; color: white;">Google Scholar</a>
+                    <a href="{{ $scholarUrl }}" target="_blank" class="btn w-100" style="background-color: #FFB300; color: white;">Google Scholar</a>
                 @else
                     <span class="text-muted">Profil Google Scholar belum ditemukan.</span>
                 @endif
